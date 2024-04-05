@@ -122,6 +122,7 @@ img {
   width: 100%;
   padding: 0 6rem;
   z-index: 100;
+  visibility: ;
 }
 
 /* nav and stickly class at the same time */
@@ -133,6 +134,22 @@ img {
 .nav__logo {
   height: 4.5rem;
   transition: all 0.3s;
+}
+
+/* for mobile viewport */
+.mobile-hamburger {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.mobile-hamburger-icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.mobile-hamburger-icon[name='close-outline'] {
+  display: none;
 }
 
 .nav__links {
@@ -168,6 +185,21 @@ img {
   color: inherit;
   background-color: var(--color-primary-darker);
   color: #333;
+}
+
+.mobile-hamburger {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.mobile-hamburger-icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.mobile-hamburger-icon[name='close-outline'] {
+  display: none;
 }
 
 /* HEADER */

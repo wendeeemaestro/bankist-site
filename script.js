@@ -263,6 +263,28 @@ const imgObserver = new IntersectionObserver(loadImg, {
 });
 imgTargets.forEach(img => imgObserver.observe(img));
 
+// Mobile Hamburger button
+
+// open menu ater clicking hamburger
+const btnNavEl = document.querySelector('.mobile-hamburger');
+const headerEl = document.querySelector('.header');
+btnNavEl.addEventListener('click', function () {
+  headerEl.classList.toggle('nav-open');
+});
+
+// close menu after clicking on link
+const allLinks = document.querySelectorAll('a:link');
+allLinks.forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    if (link.classList.contains('nav__link'))
+      headerEl.classList.toggle('nav-open');
+  });
+});
+
+// if (link.classList.contains('nav-link')) headerEl.classList.toggle('nav-open');
+
 // LECTURES*********************************
 // selecting elements
 // const header = document.querySelector('.header');
@@ -293,7 +315,7 @@ imgTargets.forEach(img => imgObserver.observe(img));
 // CSS Custom properties
 // in CSS to set a root property:  root{ --color-primary:#5ec576}; but in JAVASCRIPT: document.documentElement.style (or whatever it is youre targeting)
 
-document.documentElement.style.setProperty('--color-primary', 'lightgreen');
+// document.documentElement.style.setProperty('--color-primary', 'lightgreen');
 
 // EVENT HANDLERS:
 // adding random colors to nav items
