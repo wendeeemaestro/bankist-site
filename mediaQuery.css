@@ -102,4 +102,11 @@
   .features__img {
     width: 100%;
   }
+  .operations__tab {
+    margin-right: 2rem;
+    padding: 10px;
+  }
+  /* .btn .operations__tab {
+    padding: 1.25rem 1.5rem;
+  } */
 }
